@@ -1,0 +1,5 @@
+CS553_CaseStudy1
+set_env.sh
+test.sh
+*.key*
+*.txt
