@@ -32,7 +32,12 @@ run_one_command() {
 
 cd "$(dirname $0)" || exit 1
 
-source set_env.sh
+if [ "$#" -ne 1 ]; then
+    echo "Usage: $0 <path_to_set_env.sh>"
+    exit 1
+fi
+
+source $1
 
 source check_server_status.sh
 
